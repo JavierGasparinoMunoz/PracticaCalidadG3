@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/meterBox"
+        android:layout_height="200dp"
+>
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimaryVariant"
+>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+    >
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/oneFour"
+            android:text="1/4"
+            android:padding="8dp"
+            android:textSize="20dp"
+            android:textColor="?android:textColorPrimary"
+            android:backgroundTint="?attr/colorPrimaryVariant"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/twoFour"
+            android:text="2/4"
+            android:padding="8dp"
+            android:textSize="20dp"
+            android:textColor="?android:textColorPrimary"
+            android:backgroundTint="?attr/colorPrimaryVariant"
+            android:textAlignment="center"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/threeFour"
+                android:text="3/4"
+                android:padding="8dp"
+                android:textSize="20dp"
+                android:textColor="?android:textColorPrimary"
+                android:backgroundTint="?attr/colorPrimaryVariant"
+                android:textAlignment="center"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fourFour"
+            android:text="4/4"
+            android:textColor="?android:textColorPrimary"
+            android:backgroundTint="?attr/colorPrimaryVariant"
+            android:padding="8dp"
+            android:textSize="20dp"
+            android:textAlignment="center"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fiveFour"
+                android:text="5/4"
+                android:textColor="?android:textColorPrimary"
+                android:backgroundTint="?attr/colorPrimaryVariant"
+                android:padding="8dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+        />
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
