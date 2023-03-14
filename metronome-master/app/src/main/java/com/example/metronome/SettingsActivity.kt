@@ -21,6 +21,7 @@ import java.util.stream.Collectors
 
 typealias PresetsData = Triple<String, Int, Int>
 
+//En esta clase seteamos la logica principal de la aplicacion.
 class SettingsActivity : AppCompatActivity()  {
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -92,8 +93,7 @@ class SettingsActivity : AppCompatActivity()  {
 
     }
 
-    // FIXME the rhythm data should be structured in some way, so you dont need
-    // to hardcode it
+    //Guardamos las opciones de la aplicacion.
     private fun saveOptions(name: String, buttonText: String, textViewText: String) {
         val fileOutputStream = openFileOutput("config.txt", Context.MODE_APPEND)
         fileOutputStream.write("$name\n$buttonText\n$textViewText\n".toByteArray())

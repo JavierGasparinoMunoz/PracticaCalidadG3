@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 
+//Clase encargada de cambiar el Tema de la aplicacion
 class ThemeManager(appContext: AppCompatActivity) {
 
     companion object {

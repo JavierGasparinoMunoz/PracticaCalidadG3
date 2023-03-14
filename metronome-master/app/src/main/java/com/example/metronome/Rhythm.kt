@@ -46,6 +46,7 @@ class Rhythm(
     private var skipped = true
     private var threadIsRunning: Boolean = false
 
+    //Inicia el metronomo hasta que este se le indica que pare
     fun start() {
         paused = false
         if (!threadIsRunning)
@@ -58,6 +59,7 @@ class Rhythm(
         paused = true
     }
 
+    //Indicamos que el metronomo no va a parar hasta que se pause
     suspend fun playBeatsUntilPaused() {
 
         var currentBeat = 0
@@ -73,6 +75,7 @@ class Rhythm(
         }
     }
 
+    //actualizamos los BeatCircles
     private fun updateBeatCircles(currentBeat: Int, meter: Int) {
         var prevBeat = if (currentBeat == 0) {
             meter - 1
@@ -94,6 +97,7 @@ class Rhythm(
         }
     }
 
+
     fun skipBeat(index:Int) {
         if (skippedBeat[index]) {
             skippedBeat[index] = !isSkipped()
@@ -104,6 +108,7 @@ class Rhythm(
         }
     }
 
+    //Accedemos al siguiente sonido
     private fun getNextSound(currentBeat: Int): MediaPlayer {
         return when {
             skippedBeat[currentBeat] -> muteSound

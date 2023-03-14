@@ -17,6 +17,7 @@ import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
 
+    //Creacion variables globales
     private lateinit var tvCurrentBpms: TextView
     private lateinit var addBpmsButton: MaterialButton
     private lateinit var subBpmsButton: MaterialButton
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var circleList: ConstraintLayout
     private lateinit var settingsActivity: SettingsActivity
 
+    //Interaccion inicial de la aplicación
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -61,16 +63,19 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        //aumenta el ritmo del metrononmo
         addBpmsButton.setOnClickListener {
             rhythm.increaseBpm()
             tvCurrentBpms.text = rhythm.getBpm().toString()
         }
 
+        //reduce el ritmo del metronomo
         subBpmsButton.setOnClickListener {
             rhythm.decreaseBpm()
             tvCurrentBpms.text = rhythm.getBpm().toString()
         }
 
+        //se inicia si esta parado,  se para si esta activo
         playBpmsButton.setOnClickListener {
             if (rhythm.isPaused()) {
                 rhythm.start()
@@ -102,7 +107,6 @@ class MainActivity : AppCompatActivity() {
     private fun pauseMetronome() {
         rhythm.stop()
         playBpmsButton.setIconResource(R.drawable.ic_baseline_play_arrow_24)
-        //rhythm.resetBeatCircles()
     }
 
     private fun instantiateSheet() {
@@ -129,6 +133,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Devuelve una lista con todos los  botones de la aplicacion
     fun getAllButtons(layout: ViewGroup): List<MaterialButton> {
         val buttons: MutableList<MaterialButton> = ArrayList()
         for (i in 0 until layout.childCount) {
@@ -182,6 +187,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //cierra el teclado
     private fun closeKeyboard() {
         var inManager = this.getSystemService(Context.INPUT_METHOD_SERVICE)
         inManager = inManager as InputMethodManager
