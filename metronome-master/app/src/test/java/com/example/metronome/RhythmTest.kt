@@ -4,7 +4,6 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mockito
-import org.powermock.api.mockito.PowerMockito.*
 import org.powermock.core.classloader.annotations.PrepareForTest
 import org.powermock.modules.junit4.PowerMockRunner
 
@@ -32,6 +31,11 @@ class RhythmTest {
 
     fun setMeter(){
         rhythm?.setMeter(100)
+        assert(rhythm?.getMeter()==100)
+    }
+
+    fun setBpm(){
+        rhythm?.setBpm(100)
         assert(rhythm?.getMeter()==100)
     }
 
